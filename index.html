@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo/icon_1.png" type="image/x-icon" />
+    <title>Music Desktop</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Wrapper -->
+      <div class="wrapper">
+        <!-- Menu -->
+        <div class="menu">
+          <header>
+            <div
+              class="img-logo"
+              style="background-image: url(img/logo/avata_1.jpg)"
+            ></div>
+            <span>Văn Thơm</span>
+          </header>
+          <ul>
+            <li>Music</li>
+          </ul>
+        </div>
+        <!-- Playlist -->
+        <div class="playlist-bar">
+          <header>
+            <span>Danh sách phát</span>
+          </header>
+          <nav></nav>
+          <div class="playlist">
+            <!-- <div class="song">
+              <div class="left">
+                <div class="head">
+                  <span>1</span>
+                </div>
+                <div
+                  class="song-img"
+                  style="background-image: url(./img/music/bat_tinh_yeu_len.jpg)"
+                ></div>
+                <div class="title">
+                  <div class="name">Bật Tình Yêu Lên</div>
+                  <div class="artist">Tăng Duy Tân x Hòa Minzy</div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="duration">3:23</div>
+                <div class="option">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+              </div>
+            </div> -->
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      <!-- Music Player -->
+      <div class="music-player">
+        <div class="left">
+          <!-- Name Music -->
+          <div class="music-name">
+            <div class="music-img"></div>
+            <div class="title-music">
+              <div class="name">Bật Tình Yêu Lên</div>
+              <div class="artist">Tăng Duy Tân x Hòa Minzy</div>
+            </div>
+          </div>
+        </div>
+        <!-- Center -->
+        <div class="center">
+          <!-- progress -->
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <div class="time">
+              <span class="current">0:00</span>
+              <span class="duration">3:01</span>
+            </div>
+          </div>
+          <!-- Controls -->
+          <div class="controls">
+            <!-- Random song -->
+            <button id="btn-random">
+              <i class="fa fa-random"></i>
+            </button>
+            <!-- <button id="btn-repeat" title="Lặp lại bài hát hiện tại">
+              <i class="fas fa-redo"></i>
+            </button> -->
+            <!-- Prev song -->
+            <button id="btn-prev" title="Trước">
+              <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <!-- Play song -->
+            <button id="btn-play" onclick="musicPlay()" title="Phát">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <!-- Next song -->
+            <button id="btn-next" title="Tiếp">
+              <i class="fa-solid fa-forward-step"></i>
+            </button>
+            <!-- Playback time -->
+            <button id="btn-playback-time" title="Playback time">
+              <i class="fa-solid fa-stopwatch"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="right">
+          <!-- Volume -->
+          <div class="volume">
+            <button class="btn-volume">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <input
+              type="range"
+              name="Volume"
+              onchange="volume_change()"
+              id="volume"
+              value="70"
+              min="0"
+              max="100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
