@@ -249,6 +249,7 @@
   height: 4px;
   background-color: #5e5e5e;
   border-radius: 10px;
+  transition: all 0.5;
 }
 .progress .progress-bar {
   position: relative;
