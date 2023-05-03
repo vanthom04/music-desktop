@@ -83,6 +83,139 @@ let allMusic = [
   //   src: "./music/",
   //   idMusic: "song12",
   // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song13",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song14",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song15",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song16",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song17",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song18",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song19",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song20",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song21",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song22",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song23",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song24",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song25",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song26",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song27",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song28",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song29",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song30",
+  // },
+  // {
+  //   name: "",
+  //   artist: "",
+  //   img: "img/music/",
+  //   src: "./music/",
+  //   idMusic: "song31",
+  // },
 ];
 
 const playlist = document.querySelector(".playlist");
@@ -109,8 +242,6 @@ window.addEventListener("load", () => {
   loadMusic(currentIndex);
   playSongMusic();
 });
-
-// Render playlist
 
 // Xử lý khi click vào playlist
 for (let i = 0; i < allMusic.length; i++) {
@@ -156,15 +287,16 @@ for (let i = 0; i < allMusic.length; i++) {
 }
 //
 const allSongMusic = playlist.querySelectorAll(".song");
+const songHead = playlist.querySelectorAll(".head span");
 
 function playSongMusic() {
   for (let j = 0; j < allSongMusic.length; j++) {
-    if (allSongMusic[j].classList.contains("active")) {
-      allSongMusic[j].classList.remove("active");
-    }
-    if (allSongMusic[j].getAttribute("musicindex") == currentIndex) {
-      allSongMusic[j].classList.add("active");
-    }
+    // if (allSongMusic[j].classList.contains("loader")) {
+    //   songHead[j].classList.remove("loader");
+    // }
+    // if (allSongMusic[j].getAttribute("musicindex") == currentIndex) {
+    //   songHead[j].classList.add("loader");
+    // }
     allSongMusic[j].setAttribute("onclick", "clicked(this)");
   }
 }
