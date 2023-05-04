@@ -165,13 +165,16 @@
   align-items: center;
   margin-right: 10px;
 }
-.playlist .song .right .duration {
+.playlist .song .right .audio-duration {
   margin: 20px;
 }
 .playlist .song .right .option {
   padding: 10px;
   font-size: 18px;
   visibility: hidden;
+  display: flex;
+  padding: 16px 8px;
+  justify-content: flex-end;
 }
 .playlist .song:hover {
   background-color: #2a2a2a;
